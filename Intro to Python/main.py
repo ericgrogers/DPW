@@ -63,6 +63,7 @@ rappers = ['Tupac', 'Nelly', 'Sir-Mix-Alot']
 for r in rappers:
     print "One of the best rappers is ", r
 
+
 #functions----------------------
 
 def calc_area(h,w):
