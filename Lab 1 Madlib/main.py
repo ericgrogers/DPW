@@ -145,7 +145,7 @@ def mad_lib_parts(response):
 '''Function for initialization.'''
 def init():
 
-    #start by getting the user's reponses.
+    #start by getting the user's responses.
     get_answers()
 
     #call the mad lib parts function and pass in the answers array. Save the result as full_lib.
