@@ -132,3 +132,12 @@ def mad_lib_parts(response):
     #defining the dictionary. Concatenating the responses contained in the answers array, into the mad lib parts.
     parts = {1: response[0] + " and " + response[1] + " went up the hill to fetch " + str(response[3]) + " pails of " + response[6] + ".", 2: response[0] + " fell down and broke his " + response[7] + ",", 3: "And " + response[1] + " came " + response[9] + " after.", 4: "\n", 5: "Up " + response[0] + " got, and he did " + response[10] + " " + str(response[4]) + "mph,", 6: "To old Dame " + response[2] + ", who patched his nob", 7: "with vinegar and " + str(response[5]) + " brown papers."}
 
+    #instantiate compiled as an empty string.
+    compiled = ''
+
+    #loop through the values of the parts dictionary and append them to 'compiled' with a new line at the end of each part.
+    for part in parts:
+        compiled += parts[part] + "\n"
+
+    #return the the compiled mad lib.
+    return compiled
