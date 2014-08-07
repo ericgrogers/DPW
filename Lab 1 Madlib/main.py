@@ -22,5 +22,10 @@ def name_question():
     if response != '':
         pass
 
+    #otherwise, ask them again.
+    else:
+        print "I'm sorry, you cannot leave it blank. Please enter a person's name."
+        name_question()
+
     #return their response.
     return response
