@@ -99,3 +99,16 @@ def verb_question():
 
     #return the value of their response.
     return response
+
+'''Function to gather all of the user's answers/responses.'''
+def get_answers():
+
+    #call the function for names 3 times and append the responses to the answers array.
+    for i in range(0, 3):
+        response = name_question()
+        answers.append(response)
+
+    #call the function for numbers 3 times and append the responses to the answers array.
+    for i in range(0, 3):
+        response = number_question()
+        answers.append(response)
