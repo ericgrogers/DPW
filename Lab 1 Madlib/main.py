@@ -112,3 +112,13 @@ def get_answers():
     for i in range(0, 3):
         response = number_question()
         answers.append(response)
+
+        #call the function for objects 3 times and append the responses to the answers array.
+    for i in range(0, 3):
+        response = object_question()
+        answers.append(response)
+
+    #call the function for verbs 2 times and append the responses to the answers array.
+    for i in range(0, 2):
+        response = verb_question()
+        answers.append(response)
