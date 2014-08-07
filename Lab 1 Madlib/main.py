@@ -48,3 +48,20 @@ def number_question():
         except ValueError:
             print "Please, only use whole numbers."
             number_question()
+
+     #if their response is less than 10, add 10 to it.
+    if response < 10:
+        print "That's not enough, I'm going to add some to it."
+        response += 10
+
+    #otherwise, if their response is greater than 100, subtract 20 from it.
+    elif response > 100:
+        print "That's too much, I'm going to subtract a little."
+        response -= 20
+
+    #otherwise, continue on.
+    else:
+        pass
+
+    #return the value of their response.
+    return response
