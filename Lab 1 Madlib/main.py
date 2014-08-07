@@ -29,3 +29,22 @@ def name_question():
 
     #return their response.
     return response
+
+'''Function to get the numbers for the mad lib.'''
+def number_question():
+
+    #instantiate the response
+    response = 0
+
+    #if the user enters anything other than a number, continue to ask for a number.
+    while True:
+
+        #try to parse the user input as an integer, if it passes, go to the next if statement.
+        try:
+            response = int(raw_input("Please enter a number. "))
+            break
+
+        #if an error is thrown, alert the user to use whole numbers and ask again.
+        except ValueError:
+            print "Please, only use whole numbers."
+            number_question()
