@@ -65,3 +65,20 @@ def number_question():
 
     #return the value of their response.
     return response
+
+'''Function to get the objects for the mad lib.'''
+def object_question():
+
+    #ask the user for an object name.
+    response = raw_input("Please enter the name of an object. ")
+
+    #if the response is not blank, return the value.
+    if response != '':
+        pass
+
+    #otherwise, prompt the user again.
+    else:
+        print "I'm sorry, you cannot leave it blank. Please enter the name of an object."
+
+    #return the value of their response.
+    return response
