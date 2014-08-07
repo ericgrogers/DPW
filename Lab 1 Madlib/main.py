@@ -122,3 +122,13 @@ def get_answers():
     for i in range(0, 2):
         response = verb_question()
         answers.append(response)
+
+'''Function to compile the responses and the mad lib together. Passing in the responses.'''
+def mad_lib_parts(response):
+
+    #instantiate a dictionary named parts.
+    parts = dict()
+
+    #defining the dictionary. Concatenating the responses contained in the answers array, into the mad lib parts.
+    parts = {1: response[0] + " and " + response[1] + " went up the hill to fetch " + str(response[3]) + " pails of " + response[6] + ".", 2: response[0] + " fell down and broke his " + response[7] + ",", 3: "And " + response[1] + " came " + response[9] + " after.", 4: "\n", 5: "Up " + response[0] + " got, and he did " + response[10] + " " + str(response[4]) + "mph,", 6: "To old Dame " + response[2] + ", who patched his nob", 7: "with vinegar and " + str(response[5]) + " brown papers."}
+
