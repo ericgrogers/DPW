@@ -141,3 +141,18 @@ def mad_lib_parts(response):
 
     #return the the compiled mad lib.
     return compiled
+
+'''Function for initialization.'''
+def init():
+
+    #start by getting the user's reponses.
+    get_answers()
+
+    #call the mad lib parts function and pass in the answers array. Save the result as full_lib.
+    full_lib = mad_lib_parts(answers)
+
+    #print a new line (for readability), then print the full mad lib.
+    print "\n" + full_lib
+
+#initialize
+init()
