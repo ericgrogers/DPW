@@ -12,3 +12,15 @@ answers = []
 
 
 
+'''Function to get the names for the mad lib.'''
+def name_question():
+
+    # Ask the user for a name and save their response.
+    response = raw_input("Please enter a person's name. ")
+
+    #if their response is not blank, return the response.
+    if response != '':
+        pass
+
+    #return their response.
+    return response
