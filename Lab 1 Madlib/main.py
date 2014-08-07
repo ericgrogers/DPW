@@ -82,3 +82,20 @@ def object_question():
 
     #return the value of their response.
     return response
+
+'''Function to get the verbs for the mad lib.'''
+def verb_question():
+
+    #ask the user to enter a verb and save their response.
+    response = raw_input("Please enter a verb (e.g. running, swimming etc.) ")
+
+    #if their response is not empty, return the value of their response.
+    if response != '':
+        pass
+
+    #otherwise, prompt them again.
+    else:
+        print "I'm sorry, you cannot leave it blank. Please enter a verb."
+
+    #return the value of their response.
+    return response
