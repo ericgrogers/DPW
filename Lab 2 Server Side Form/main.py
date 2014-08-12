@@ -17,6 +17,13 @@ class MainHandler(webapp2.RequestHandler):
 class Page(object):
     def __init__(self):
 
+        #set the default key values for the form inputs
+        self.name = 'name'
+        self.telephone = 'tele'
+        self.email = 'email'
+        self.interest = 'interest'
+        self.return_customer = 'Yes, please give me a 10% discount.'
+
         #set the default title
         self.title = "Eric Rogers | Contact"
 
