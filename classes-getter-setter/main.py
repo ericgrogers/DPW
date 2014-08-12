@@ -5,7 +5,9 @@ from pages import Page #import the Page class from the pages package.
 class MainHandler(webapp2.RequestHandler):
     def get(self):
         p = Page()
-        self.response.write(p.print_out())
+        p.body = "Miss Piggy likes Kermit De Frog"
+
+        self.response.write(p.whole_page)
 
 
 
