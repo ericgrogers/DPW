@@ -45,6 +45,28 @@ class Page(object):
     </nav>
 </header>'''
 
+        #create the body section of the contact page (for view1)
+        self.contact_body = '''
+<form method="GET">
+    <label for="name">Name</label>
+    <input type="text" name="name" id="name" placeholder="John Doe" required="true">
+    <label for="telephone">Telephone</label>
+    <input type="tel" name="telephone" id="telephone" placeholder="555-555-5555" required="true">
+    <label for="email">Email</label>
+    <input type="email" name="email" id="email" placeholder="jdoe@example.com" required="true">
+    <label for="interest">Interested in</label>
+    <div id="select-box">
+        <select name="interest" id="interest">
+            <option>New Website</option>
+            <option>Website Redesign</option>
+            <option>Application Development</option>
+        </select>
+    </div>
+    <input type="checkbox" name="return_customer" id="return_customer">
+    <label for="return_customer"><span class="visible-checkbox"></span>I am a returning customer.</label>
+    <input type="submit" value="Send">
+</form>'''
+
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
 ], debug=True)
