@@ -10,7 +10,32 @@ import webapp2
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
-        self.response.write('Hello world!')
+        #create a shortcut to the Page() class
+        p = Page()
+
+        #if the GET method is invoked, grab the form values and set them to the proper keys
+        if self.request.GET:
+
+            #create a shortcut for self.request
+            sr = self.request
+
+            #set the page title.
+            p.title = "Eric Rogers | Thank You!"
+
+            #set the Page().name attribute to the input value submitted.
+            p.name = sr.GET['name']
+
+            #set the Page().telephone attribute to the input value submitted.
+            p.telephone = sr.GET['telephone']
+
+            #set the Page().email attribute to the input value submitted.
+            p.email = sr.GET['email']
+
+            #set the Page().interest attribute to the input value submitted.
+            p.interest = sr.GET['interest']
+
+            #set the Page().return_customer attribute to reflect the user's choice when checked.
+            p.return_customer = 'Yes, please give me a 10% discount.'
 
 
 #Create a Page class to hold all of the view model templates.
@@ -128,7 +153,7 @@ class Page(object):
 
         #return the formatted thank you page.
         return html
-    
+
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
 ], debug=True)
