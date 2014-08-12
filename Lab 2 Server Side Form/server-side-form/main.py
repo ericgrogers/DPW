@@ -37,6 +37,23 @@ class MainHandler(webapp2.RequestHandler):
             #set the Page().return_customer attribute to reflect the user's choice when checked.
             p.return_customer = 'Yes, please give me a 10% discount.'
 
+            #try to grab the Page().return_customer checkbox value
+            try:
+                sr.GET['return_customer']
+
+            #if there is no value, the server throws a KeyError meaning the box is not checked.
+            except KeyError:
+
+                #set the Page().return_customer attribute to reflect the user's choice when not checked.
+                p.return_customer = 'No, I am a new customer.'
+
+            #output Page().view2 to the page.
+            self.response.write(p.view2())
+
+        #otherwise, output Page().view1 to the page.
+        else:
+            self.response.write(p.view1())
+
 
 #Create a Page class to hold all of the view model templates.
 class Page(object):

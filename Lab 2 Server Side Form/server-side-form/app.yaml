@@ -1,4 +1,4 @@
-application: Lab 2 Server Side Form
+application: server-side-form
 version: 1
 runtime: python27
 api_version: 1
@@ -7,6 +7,9 @@ threadsafe: yes
 handlers:
 - url: /images
   static_dir: images
+
+- url: /css
+  static_dir: css
 
 - url: /favicon\.ico
   static_files: favicon.ico
