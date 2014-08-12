@@ -72,7 +72,18 @@ class Page(object):
 </body>
 </html>'''
 
-        
+    #create a function to compile and return view1 (contact page)
+    def view1(self):
+
+        #create a variable that contains the head, body, and close sections of the contact page.
+        html = self.head + self.contact_body + self.close
+
+        #format the page to allow variables in the HTML markup.
+        html = html.format(**locals())
+
+        #return the formatted contact page.
+        return html
+
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
 ], debug=True)
