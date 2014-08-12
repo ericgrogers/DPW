@@ -67,6 +67,12 @@ class Page(object):
     <input type="submit" value="Send">
 </form>'''
 
+        #create the closing section of the page.
+        self.close = '''
+</body>
+</html>'''
+
+        
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
 ], debug=True)
