@@ -54,3 +54,67 @@ table {
 }
 
 /*------- End of CSS Reset --------------*/
+
+/*======== Site Wide Styles =============*/
+
+body {
+    background: url("../images/keyboard.jpg");
+    background-size: cover;
+}
+
+
+/*========= Header Section ============*/
+header {
+    width: 100%;
+    height: 60px;
+    background: rgba(20,20,20,0.8);
+    box-shadow: 0 5px 5px #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+
+
+h1 {
+    color: #fff;
+    font-size: 2em;
+    margin-left: 50px;
+    padding-top: 10px;
+    float: left;
+}
+
+h2 {
+    width: 200px;
+    font-size: 1.2em;
+    color: #555;
+    padding-top: 20px;
+    margin-left: 30px;
+    float: left;
+}
+
+header nav {
+    float: right;
+}
+
+header nav ul li {
+    width: 150px;
+    padding-top: 15px;
+    float: left;
+}
+
+header li a {
+    color: #666;
+    font-size: 1.5em;
+    text-align: center;
+    text-decoration: none;
+}
+
+header li a:hover {
+    color: #fff;
+}
+
+.active_link {
+    color: #fff;
+    text-decoration: underline;
+}
