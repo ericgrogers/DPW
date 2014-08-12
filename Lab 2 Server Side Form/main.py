@@ -67,6 +67,32 @@ class Page(object):
     <input type="submit" value="Send">
 </form>'''
 
+        #create the body section for the thank you page (for view2)
+        self.thanks_body = '''
+<section>
+    <h3>Thank You!</h3>
+    <p>Hello {self.name},</p>
+    <p>Thank you for contacting me about your project. I look forward to working with you!</p>
+    <p>Here is a summary of the information that you submitted.</p>
+
+    <dl>
+        <dt>Name: </dt>
+        <dd>{self.name}</dd>
+        <dt>Telephone: </dt>
+        <dd>{self.telephone}</dd>
+        <dt>Email: </dt>
+        <dd>{self.email}</dd>
+        <dt>Interest: </dt>
+        <dd>{self.interest}</dd>
+        <dt>Return Customer: </dt>
+        <dd>{self.return_customer}</dd>
+    </dl>
+
+    <p>I will be in contact with you soon so that we can discuss the details of your project.</p>
+    <p>Sincerely,</p>
+    <p>Eric Rogers</p>
+</section>'''
+
         #create the closing section of the page.
         self.close = '''
 </body>
