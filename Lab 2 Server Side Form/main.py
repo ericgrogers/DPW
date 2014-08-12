@@ -117,6 +117,18 @@ class Page(object):
         #return the formatted contact page.
         return html
 
+        #create a function to compile and return view2 (thank you page)
+    def view2(self):
+
+        #create a variable that contains the head, body, and close sections of the thank you page.
+        html = self.head + self.thanks_body + self.close
+
+        #format the page to allow variables in the HTML markup.
+        html = html.format(**locals())
+
+        #return the formatted thank you page.
+        return html
+    
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
 ], debug=True)
