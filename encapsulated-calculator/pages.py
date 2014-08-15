@@ -36,10 +36,77 @@ class Page(object):
     <title>{self.title}</title>
     <link rel="stylesheet" type="text/css" href={self.css}>
 </head>'''
-        self.body = ''''''
+        #page body section
+        self.body = '''
+<body>
+<header>
+    <h1>Eric Rogers</h1>
+    <h2>designer/developer</h2>
+    <nav>
+        <ul>
+            <li><a class="active_link" href="#">pricing</a></li>
+            <li><a href="#">portfolio</a></li>
+            <li><a href="#">contact</a></li>
+        </ul>
+    </nav>
+</header>
 
-        
-         #page closing tags
+<article>
+    <h3>Maintenance Packages</h3>
+    <div id="packages">
+        <ul class="pkg-nav">
+            <li><a class="pkg-nav-active" href="?package=basic">Basic</a></li>
+            <li><a href="?package=bronze">Bronze</a></li>
+            <li><a href="?package=silver">Silver</a></li>
+            <li><a href="?package=gold">Gold</a></li>
+            <li><a href="?package=platinum">Platinum</a></li>
+        </ul>
+        <h3 class="pkg-name">{self.package_name}</h3>
+        <table>
+            <tr>
+                <th>{self.expires_label}</th>
+                <td>{self.expires}</td>
+            </tr>
+            <tr>
+                <th>{self.hours_label}</th>
+                <td>{self.hours}</td>
+            </tr>
+            <tr>
+                <th>{self.rate_label}</th>
+                <td>{self.rate}</td>
+            </tr>
+            <tr>
+                <th>{self.discount_rate_label}</th>
+                <td>{self.discount_rate}</td>
+            </tr>
+        </table>
+
+        <ul class="totals">
+            <li>{self.total_label}</li>
+            <li>{self.total}</li>
+            <li>{self.discounted_total_label}</li>
+            <li>{self.discounted_total}</li>
+        </ul>
+    </div>
+
+    <div id="info">
+        <p>I provide a variety of services to clients as part of a maintenance package in order to ensure that the
+            client's websites and applications continue to function as desired. I offer several different package options so that you don't have to pay for more than what you need. Maintenance packages will not automatically start upon purchase. You will be provided with a range of start dates to choose from after purchase.</p>
+        <p>Even if you are not a current client, I can provide maintenance for your websites or applications.</p>
+        <h4>Some of the services that I provide include:</h4>
+        <ul>
+            <li>Troubleshooting.</li>
+            <li>New Functionality.</li>
+            <li>Upgrading Components.</li>
+            <li>New Pages or Sections.</li>
+            <li>SEO Optimization.</li>
+        </ul>
+    </div>
+
+    <h5>Discounted rate only applies to returning customers.</h5>
+</article>'''
+
+        #page closing tags
         self.close = '''
 </body>
 </html>'''
