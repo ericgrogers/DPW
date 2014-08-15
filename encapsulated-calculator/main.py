@@ -14,6 +14,15 @@ from packages import MaintenancePackage
 class MainHandler(webapp2.RequestHandler):
     def get(self):
 
+        #method to calculate the total depending on which package was selected.
+        def get_total(package):
+
+            #multiply hours by rate to get the total
+            total = package.hours * package.rate
+
+            #return a formatted total, removing decimal places and adding a comma in the proper places.
+            return "{:,.0f}".format(total)
+
         #basic package object
         basic = MaintenancePackage()
         basic.package_name = "Basic"
