@@ -127,6 +127,17 @@ class MainHandler(webapp2.RequestHandler):
         #create an array of the packages
         pkgs = [basic, bronze, silver, gold, platinum]
 
+        #if a GET request is made.
+        if self.request.GET:
+
+            #call the show labels method from the Page() class.
+            p.show_labels()
+
+            #call the select_package() function
+            select_package()
+        #compile the page html and write it to the document.
+        self.response.write(p.compiler())
+        
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
 ], debug=True)
