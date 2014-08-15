@@ -13,7 +13,17 @@ from packages import MaintenancePackage
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
-        self.response.write('Hello world!')
+
+        #basic package object
+        basic = MaintenancePackage()
+        basic.package_name = "Basic"
+        basic.expires = "48 hours from start."
+        basic.hours = 6
+        basic.rate = 65
+        basic.discount = 0.1
+        basic.discount_rate = 10
+        basic.total = get_total(basic)
+        basic.discounted_total = get_discounted_total(basic)
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
