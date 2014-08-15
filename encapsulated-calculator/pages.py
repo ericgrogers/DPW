@@ -120,6 +120,16 @@ class Page(object):
         self.total_label = "Total:"
         self.discounted_total_label = "Discounted:"
 
+    #method to compile all of the html
+    def compiler(self):
+
+        #concatenating all of the html parts
+        html = self.head + self.body + self.close
+
+        #formatting the html to use variables in the markup
+        html = html.format(**locals())
+        return html
+
     #getters and setters for the page attributes(properties)
     @property
     def expires(self):
