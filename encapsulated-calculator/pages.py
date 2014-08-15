@@ -110,3 +110,12 @@ class Page(object):
         self.close = '''
 </body>
 </html>'''
+
+    #method to show the labels for each attribute by populating the values.
+    def show_labels(self):
+        self.expires_label = 'Expires After:'
+        self.hours_label = "Hours Included:"
+        self.rate_label = "Hourly Rate:"
+        self.discount_rate_label = "Discount Rate:"
+        self.total_label = "Total:"
+        self.discounted_total_label = "Discounted:"
