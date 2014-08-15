@@ -80,6 +80,17 @@ class MainHandler(webapp2.RequestHandler):
         basic.total = get_total(basic)
         basic.discounted_total = get_discounted_total(basic)
 
+        #bronze package object
+        bronze = MaintenancePackage()
+        bronze.package_name = "Bronze"
+        bronze.expires = "2 weeks from start."
+        bronze.hours = 24
+        bronze.rate = 60
+        bronze.discount = 0.1
+        bronze.discount_rate = 10
+        bronze.total = get_total(bronze)
+        bronze.discounted_total = get_discounted_total(bronze)
+
         #create an array of the packages
         pkgs = [basic, bronze, silver, gold, platinum]
 
