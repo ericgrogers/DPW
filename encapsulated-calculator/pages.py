@@ -27,6 +27,14 @@ class Page(object):
         self.total_label = ''
         self.discounted_total_label = ''
 
-        self.head = ''''''
+              #page head section
+        self.head = '''
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{self.title}</title>
+    <link rel="stylesheet" type="text/css" href={self.css}>
+</head>'''
         self.body = ''''''
         self.close = ''''''
