@@ -137,7 +137,7 @@ class MainHandler(webapp2.RequestHandler):
             select_package()
         #compile the page html and write it to the document.
         self.response.write(p.compiler())
-        
+
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
 ], debug=True)
