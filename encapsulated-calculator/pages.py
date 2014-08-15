@@ -37,4 +37,9 @@ class Page(object):
     <link rel="stylesheet" type="text/css" href={self.css}>
 </head>'''
         self.body = ''''''
-        self.close = ''''''
+
+        
+         #page closing tags
+        self.close = '''
+</body>
+</html>'''
