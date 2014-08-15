@@ -1,0 +1,294 @@
+/**********************************
+Eric Rogers
+08/12/2014
+Design Patterns for Web Programming
+Simple Form
+***********************************/
+
+
+/*======= CSS RESET ================*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    box-sizing: border-box;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+    box-sizing: border-box;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*------- End of CSS Reset --------------*/
+
+/*======== Site Wide Styles =============*/
+
+body {
+    background: url("../images/bkg.jpg");
+    background-size: cover;
+    color: rgba(255,255,255,0.8);
+    font-family: Georgia, Times, "Times New Roman", serif;
+    font-size: 1.2em;
+}
+
+
+/*========= Header Section ============*/
+header {
+    width: 100%;
+    height: 60px;
+    background: rgba(20,20,20,0.8);
+    box-shadow: 0 5px 5px #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+
+
+h1 {
+    color: #fff;
+    font-size: 2em;
+    margin-left: 50px;
+    padding-top: 10px;
+    float: left;
+}
+
+h2 {
+    width: 200px;
+    font-size: 1.2em;
+    color: #555;
+    padding-top: 20px;
+    margin-left: 30px;
+    float: left;
+}
+
+header nav {
+    float: right;
+}
+
+header nav ul li {
+    width: 150px;
+    padding-top: 15px;
+    float: left;
+}
+
+header li a {
+    color: #666;
+    font-size: 1.5em;
+    text-align: center;
+    text-decoration: none;
+}
+
+header li a:hover {
+    color: #fff;
+}
+
+.active_link {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/*========= Article ==========*/
+
+article {
+    margin: 100px auto;
+    width: 960px;
+    background-color: rgba(0,0,0,0.3);
+    padding: 50px;
+}
+
+article div#packages {
+    margin-top: 30px;
+    height: 420px;
+    clear: both;
+}
+
+.pkg-nav {
+    width: 860px;
+    height: 40px;
+    background: #000;
+}
+
+.pkg-nav li {
+    width: 172px;
+    height: 40px;
+    text-align: center;
+    float: left;
+    position: relative;
+    background-image: -webkit-gradient(
+	linear,
+	left top,
+	left bottom,
+	color-stop(0, #616161),
+	color-stop(1, #000000)
+);
+background-image: -o-linear-gradient(bottom, #616161 0%, #000000 100%);
+background-image: -moz-linear-gradient(bottom, #616161 0%, #000000 100%);
+background-image: -webkit-linear-gradient(bottom, #616161 0%, #000000 100%);
+background-image: -ms-linear-gradient(bottom, #616161 0%, #000000 100%);
+background-image: linear-gradient(to bottom, #616161 0%, #000000 100%);
+}
+
+.pkg-nav a {
+    width: 172px;
+    height: 40px;
+    display:block;
+    line-height: 2;
+    text-decoration: none;
+    border-right: 1px solid #000;
+    color: rgba(255,255,255,0.4);
+    background: rgba(0,0,0,0);
+    -moz-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.pkg-nav a:hover, .pkg-nav a:focus {
+    color: rgba(255,255,255,1);
+    background: rgba(0,0,0,0.3);
+}
+
+.pkg-name {
+    width: 400px;
+    margin: 50px auto 0;
+    padding-bottom: 10px;
+    color: #fff;
+    display: block;
+    border-bottom: 1px solid rgba(255,255,255,0.5);
+}
+
+table {
+    width: 400px;
+    margin: 15px auto 0;
+    font-size: 1.2em;
+    clear: both;
+    border-bottom: 1px solid rgba(255,255,255,0.5);
+}
+
+th {
+    width:30%;
+    padding-right: 15px;
+    text-align: right;
+    color: #fff;
+}
+
+td {
+    width: 30%;
+    color: #fff;
+    padding: 0 15px 15px 15px;
+}
+
+h5 {
+    color: rgba(255,255,255,0.5);
+    width: 100%;
+    padding-top: 50px;
+    text-align: left;
+    display: block;
+    clear: left;
+}
+
+h5:before {
+    content: '*';
+    opacity: 0.5;
+}
+
+.totals {
+    font-size: 1.3em;
+    width: 400px;
+    margin: 10px auto 30px;
+    clear: both;
+}
+
+.totals li {
+    width: 50%;
+    margin-bottom: 15px;
+    text-align: right;
+    padding-right: 15px;
+    color: #00EAFF;
+    float: left;
+}
+
+.totals li:nth-of-type(2), .totals li:nth-of-type(4) {
+    text-align: left;
+    text-indent: 10px;
+    color: #fff;
+}
+
+.totals li:nth-of-type(3) {
+    color: #fff;
+}
+
+article div#info {
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    clear: both;
+}
+
+h3 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #FF9100;
+}
+
+article p {
+    line-height: 1.3;   
+}
+
+article p:nth-of-type(1) {
+    border-top: 1px solid rgba(255,255,255,0.3);
+    padding-top: 20px;
+}
+
+article p:nth-of-type(2) {
+    margin: 20px 0;   
+}
+
+h4 {
+    color: #FF9100;
+    margin-bottom: 20px;
+
+}
+
+div#info ul li {
+    list-style-type: circle;
+    margin:10px 20px;
+    color: rgba(255,255,255,1);
+}
+

@@ -74,7 +74,7 @@ class MainHandler(webapp2.RequestHandler):
         basic.package_name = "Basic"
         basic.expires = "48 hours from start."
         basic.hours = 6
-        basic.rate = 65
+        basic.rate = 75
         basic.discount = 0.1
         basic.discount_rate = 10
         basic.total = get_total(basic)
