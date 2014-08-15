@@ -14,6 +14,8 @@ from packages import MaintenancePackage
 class MainHandler(webapp2.RequestHandler):
     def get(self):
 
+        p = Page()
+
         #method to calculate the total depending on which package was selected.
         def get_total(package):
 
@@ -31,6 +33,23 @@ class MainHandler(webapp2.RequestHandler):
 
             #return a formatted total, removing decimal places and adding a comma in the proper places.
             return "{:,.0f}".format(total)
+
+        #populate the package details using the package location within the pkgs array.
+        def build_package(index):
+
+            #shortcut for the index (package location within the array)
+            i = index
+
+            #populate the package attributes with the correct information using the index.
+            p.package_name = pkgs[i].package_name
+            p.expires = pkgs[i].expires
+            p.hours = pkgs[i].hours
+
+            #converting the rate into a string to be able to concatenate the dollar sign in front of the value.
+            p.rate = '$' + str(pkgs[i].rate)
+            p.discount_rate = str(pkgs[i].discount_rate) + '%'
+            p.total = '$' + str(pkgs[i].total)
+            p.discounted_total = '$' + str(pkgs[i].discounted_total)
 
         #select the appropriate package using GET when the user clicks on one of the links.
         def select_package():
