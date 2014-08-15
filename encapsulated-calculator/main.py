@@ -23,6 +23,15 @@ class MainHandler(webapp2.RequestHandler):
             #return a formatted total, removing decimal places and adding a comma in the proper places.
             return "{:,.0f}".format(total)
 
+        #function to calculate the discounted total
+        def get_discounted_total(package):
+
+            #hours multiplied by rate minus the discount, rounded with the int() method
+            total = int(package.hours * package.rate - (package.hours * package.rate * package.discount))
+
+            #return a formatted total, removing decimal places and adding a comma in the proper places.
+            return "{:,.0f}".format(total)
+
         #basic package object
         basic = MaintenancePackage()
         basic.package_name = "Basic"
