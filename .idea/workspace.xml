@@ -2,7 +2,57 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8e028457-c853-4324-b54c-e9eb003dd2d3" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/inheritance/main.py" afterPath="$PROJECT_DIR$/inheritance/main.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather-app-minidom/images/1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather-app-minidom/images/10.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather-app-minidom/images/11.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather-app-minidom/images/12.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather-app-minidom/images/13.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather-app-minidom/images/14.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather-app-minidom/images/16.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather-app-minidom/images/17.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather-app-minidom/images/18.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather-app-minidom/images/19.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather-app-minidom/images/20.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather-app-minidom/images/21.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather-app-minidom/images/22.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather-app-minidom/images/23.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather-app-minidom/images/24.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather-app-minidom/images/25.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather-app-minidom/images/26.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather-app-minidom/images/27.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather-app-minidom/images/28.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather-app-minidom/images/29.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather-app-minidom/images/3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather-app-minidom/images/30.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather-app-minidom/images/31.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather-app-minidom/images/32.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather-app-minidom/images/33.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather-app-minidom/images/34.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather-app-minidom/images/35.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather-app-minidom/images/36.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather-app-minidom/images/37.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather-app-minidom/images/38.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather-app-minidom/images/39.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather-app-minidom/images/4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather-app-minidom/images/40.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather-app-minidom/images/41.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather-app-minidom/images/42.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather-app-minidom/images/43.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather-app-minidom/images/44.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather-app-minidom/images/45.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather-app-minidom/images/46.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather-app-minidom/images/47.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather-app-minidom/images/5.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather-app-minidom/images/6.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather-app-minidom/images/7.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather-app-minidom/images/8.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather-app-minidom/images/9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather-app-minidom/images/Few Showers.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather-app-minidom/images/fair.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather-app-minidom/images/m-c-rain.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather-app-minidom/images/p-c-rain.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/polymorphism/main.py" afterPath="$PROJECT_DIR$/polymorphism/main.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="DPW.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,10 +76,10 @@
   <component name="FileEditorManager">
     <leaf>
       <file leaf-file-name="main.py" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/polymorphism/main.py">
+        <entry file="file://$PROJECT_DIR$/weather-app-minidom/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1005">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0626741" vertical-offset="0" max-vertical-offset="1425">
+              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -68,6 +118,8 @@
         <option value="$PROJECT_DIR$/classes-getter-setter/main.py" />
         <option value="$PROJECT_DIR$/inheritance/main.py" />
         <option value="$PROJECT_DIR$/polymorphism/app.yaml" />
+        <option value="$PROJECT_DIR$/polymorphism/main.py" />
+        <option value="$PROJECT_DIR$/weather-app/main.py" />
       </list>
     </option>
   </component>
@@ -121,20 +173,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DPW" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DPW" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="polymorphism" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -155,6 +193,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/weather-app/images" />
       <recent name="$PROJECT_DIR$/Lab 2 Server Side Form/images" />
     </key>
   </component>
@@ -320,14 +359,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="720" y="22" width="720" height="828" extended-state="6" />
-    <editor active="true" />
+    <frame x="720" y="22" width="720" height="828" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32938075" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32916668" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32916668" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -335,11 +374,11 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
     <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -356,9 +395,9 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -387,7 +426,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
           <caret line="9" column="40" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -395,7 +433,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="825">
           <caret line="31" column="21" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -543,7 +580,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
           <caret line="9" column="40" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -551,7 +587,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7713098" vertical-offset="94" max-vertical-offset="825">
           <caret line="31" column="21" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -559,9 +594,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5013928" vertical-offset="0" max-vertical-offset="765">
           <caret line="40" column="21" selection-start-line="40" selection-start-column="21" selection-end-line="40" selection-end-column="21" />
-          <folding>
-            <element signature="e#326#623#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -569,14 +601,21 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="706">
           <caret line="0" column="25" selection-start-line="0" selection-start-column="25" selection-end-line="0" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/polymorphism/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1005">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="1005">
+          <caret line="8" column="39" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/weather-app-minidom/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0626741" vertical-offset="0" max-vertical-offset="1425">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding />
         </state>
       </provider>
