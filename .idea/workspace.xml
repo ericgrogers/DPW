@@ -1,59 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8e028457-c853-4324-b54c-e9eb003dd2d3" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather-app-minidom/images/1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather-app-minidom/images/10.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather-app-minidom/images/11.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather-app-minidom/images/12.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather-app-minidom/images/13.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather-app-minidom/images/14.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather-app-minidom/images/16.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather-app-minidom/images/17.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather-app-minidom/images/18.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather-app-minidom/images/19.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather-app-minidom/images/20.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather-app-minidom/images/21.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather-app-minidom/images/22.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather-app-minidom/images/23.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather-app-minidom/images/24.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather-app-minidom/images/25.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather-app-minidom/images/26.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather-app-minidom/images/27.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather-app-minidom/images/28.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather-app-minidom/images/29.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather-app-minidom/images/3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather-app-minidom/images/30.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather-app-minidom/images/31.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather-app-minidom/images/32.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather-app-minidom/images/33.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather-app-minidom/images/34.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather-app-minidom/images/35.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather-app-minidom/images/36.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather-app-minidom/images/37.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather-app-minidom/images/38.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather-app-minidom/images/39.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather-app-minidom/images/4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather-app-minidom/images/40.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather-app-minidom/images/41.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather-app-minidom/images/42.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather-app-minidom/images/43.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather-app-minidom/images/44.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather-app-minidom/images/45.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather-app-minidom/images/46.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather-app-minidom/images/47.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather-app-minidom/images/5.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather-app-minidom/images/6.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather-app-minidom/images/7.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather-app-minidom/images/8.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather-app-minidom/images/9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather-app-minidom/images/Few Showers.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather-app-minidom/images/fair.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather-app-minidom/images/m-c-rain.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather-app-minidom/images/p-c-rain.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/polymorphism/main.py" afterPath="$PROJECT_DIR$/polymorphism/main.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="8e028457-c853-4324-b54c-e9eb003dd2d3" name="Default" comment="" />
     <ignored path="DPW.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -74,18 +22,7 @@
     <favorites_list name="DPW" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="main.py" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/weather-app-minidom/main.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0626741" vertical-offset="0" max-vertical-offset="1425">
-              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -120,6 +57,7 @@
         <option value="$PROJECT_DIR$/polymorphism/app.yaml" />
         <option value="$PROJECT_DIR$/polymorphism/main.py" />
         <option value="$PROJECT_DIR$/weather-app/main.py" />
+        <option value="$PROJECT_DIR$/weather-app-etree/main.py" />
       </list>
     </option>
   </component>
@@ -617,6 +555,16 @@
         <state vertical-scroll-proportion="0.0626741" vertical-offset="0" max-vertical-offset="1425">
           <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/weather-app-etree/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4178273" vertical-offset="195" max-vertical-offset="1365">
+          <caret line="33" column="12" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="12" />
+          <folding>
+            <element signature="e#1#15#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
