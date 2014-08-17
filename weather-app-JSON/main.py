@@ -29,7 +29,9 @@ class MainHandler(webapp2.RequestHandler):
             condition = jsondoc['weather'][0]['description']
             self.response.write("City Chosen: " + name + "<br />" + condition)
 
-class Page(object): #borrowing from the object class
+
+#borrowing from the object class
+class Page(object):
     def __init__(self):
         self._head = '''
 <!DOCTYPE html>
