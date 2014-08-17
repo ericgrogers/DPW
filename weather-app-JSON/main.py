@@ -25,8 +25,9 @@ class MainHandler(webapp2.RequestHandler):
             #parse the JSON
             jsondoc = json.load(result)
 
-            lat = jsondoc['coord']['lat']
-
+            name = jsondoc['name']
+            condition = jsondoc['weather'][0]['description']
+            self.response.write("City Chosen: " + name + "<br />" + condition)
 
 class Page(object): #borrowing from the object class
     def __init__(self):
