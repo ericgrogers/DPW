@@ -1,25 +1,41 @@
-#!/usr/bin/env python
-#
-# Copyright 2007 Google Inc.
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#     http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-#
+"""
+Eric Rogers
+08/17/14
+Design Patterns for Web Programming
+Final: Proof of Concept
+"""
+
 import webapp2
+import urllib2
+import json
+
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
-        self.response.write('Hello world!')
+        p = Page()
+
+        self.response.write(p.print_out())
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
 ], debug=True)
+
+
+class Page(object):
+    def __init__(self):
+        self._head = '''
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta charset="UTF-8">
+       <title></title>
+    </head>
+    <body>'''
+
+        self._body = ''
+        self._close = '''
+    </body>
+</html>'''
+
+    def print_out(self):
+        return self._head + self._body + self._close
