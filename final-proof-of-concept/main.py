@@ -12,31 +12,9 @@ import json
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
-        p = PageForm()
-
-        #input format is 'type', 'name', 'placeholder', 'value'
-        p.inputs = [['text', 'search', 'Search by Title'], ['text', 'year', 'Year (optional)'], ['submit', 'submit', 'Search', 'Search']]
+        p = Page()
 
         self.response.write(p.compile_view())
-
-        if self.request.GET:
-            search = self.request.GET['search']
-            try:
-                year = self.request.GET['year']
-            except:
-                pass
-            url = "http://www.omdbapi.com/?s=" + search + "," + year
-            request = urllib2.Request(url)
-            opener = urllib2.build_opener()
-            result = opener.open(request)
-
-            jsondoc = json.load(result)
-
-            
-
-            self.response.write(jsondoc)
-
-
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
@@ -80,13 +58,10 @@ class PageForm(Page):
     def inputs(self, arr):
         self.__inputs = arr
         for item in arr:
-            try:
-                self._form_inputs += '<input type="' + item[0] + '" name="' + item[1] + '" value="' + item[3]
-            except:
-                self._form_inputs += '<input type="' + item[0] + '" name="' + item[1]
+            self._form_inputs += '<input type="' + item[1] + '" name="' + item[0]
 
             try:
-                self._form_inputs += '" placeholder="' + item[2] + '">'
+                self._form_inputs += '<input type="' + item[2] + '">'
             except:
                 self._form_inputs += '" >'
 
