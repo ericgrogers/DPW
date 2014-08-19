@@ -38,8 +38,11 @@ app = webapp2.WSGIApplication([
 ], debug=True)
 
 
+#Page Class
 class Page(object):
     def __init__(self):
+
+        #setting boilerplate html for the head of the page
         self._head = '''
 <!DOCTYPE html>
 <html lang="en">
@@ -49,37 +52,50 @@ class Page(object):
     </head>
     <body>'''
 
-        self._body = 'Search by title, or just a few letters of a title.'
+        #var to hold the body content
+        self._body = ''
+
+        #var to hold the closing tags at the page foot.
         self._close = '''
     </body>
 </html>'''
 
+    #method to compile the page view.
     def compile_view(self):
         return self._head + self._body + self._close
 
 
+#class for the page form
 class PageForm(Page):
     def __init__(self):
+        #inherits from the Page() class
         super(PageForm, self).__init__()
 
+        #defining the form attributes.
         self._form_start = '<form method="GET">'
         self._form_end = '</form>'
         self.__inputs = []
         self._form_inputs = ''
 
+    #getter for the inputs array.
     @property
     def inputs(self):
         return self._form_inputs
 
+    #setter for the inputs array.
     @inputs.setter
     def inputs(self, arr):
         self.__inputs = arr
+        #cyle through the array and create the form inputs.
         for item in arr:
+            #try to create this style of input.
             try:
                 self._form_inputs += '<input type="' + item[0] + '" name="' + item[1] + '" placeholder="' + item[2] + '">'
+            #otherwise, use this style of input.
             except:
                 self._form_inputs += '<input type="' + item[0] + '" value="' + item[1] + '">'
 
+    #method to compile the page view (overrides compile_view in the Page() class.)
     def compile_view(self):
         return self._head + self._body + self._form_start + self._form_inputs + self._form_end + self._close
 
