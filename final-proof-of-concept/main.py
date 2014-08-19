@@ -13,21 +13,21 @@ import json
 class MainHandler(webapp2.RequestHandler):
     def get(self):
         p = PageForm()
-        sr = SearchResult()
+        rl = ResultList()
 
-        #input format is 'type', 'name', 'placeholder', 'value'
-        p.inputs = [['text', 'search', 'Search by Title'], ['submit', 'submit', 'Search', 'Search']]
+        #input format is 'type', 'name/value', 'placeholder'
+        p.inputs = [['text', 'search', 'Search by Title'], ['submit', 'Search']]
 
         self.response.write(p.compile_view())
 
         if self.request.GET:
 
-            sr.search = self.request.GET['search']
+            rl.search = str(self.request.GET['search'])
 
             try:
-                self.response.write(sr.compile_view())
+                self.response.write(rl.compile_view())
             except:
-                self.response.write('<br /><p style="color: red">Please only enter a single word, without spaces.</p>')
+                self.response.write("I'm sorry, I couldn't find what you are looking for. Please Try Again.")
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
@@ -45,7 +45,7 @@ class Page(object):
     </head>
     <body>'''
 
-        self._body = 'Enter a single word, no spaces.'
+        self._body = 'Search by title, or just a few letters of a title.'
         self._close = '''
     </body>
 </html>'''
@@ -72,22 +72,17 @@ class PageForm(Page):
         self.__inputs = arr
         for item in arr:
             try:
-                self._form_inputs += '<input type="' + item[0] + '" name="' + item[1] + '" value="' + item[3]
+                self._form_inputs += '<input type="' + item[0] + '" name="' + item[1] + '" placeholder="' + item[2] + '">'
             except:
-                self._form_inputs += '<input type="' + item[0] + '" name="' + item[1]
-
-            try:
-                self._form_inputs += '" placeholder="' + item[2] + '">'
-            except:
-                self._form_inputs += '" >'
+                self._form_inputs += '<input type="' + item[0] + '" value="' + item[1] + '">'
 
     def compile_view(self):
         return self._head + self._body + self._form_start + self._form_inputs + self._form_end + self._close
 
 
-class SearchResult(PageForm):
+class ResultList(PageForm):
     def __init__(self):
-        super(SearchResult, self).__init__()
+        super(ResultList, self).__init__()
         self.search = ''
         self._title = ''
         self._year = ''
@@ -103,17 +98,18 @@ class SearchResult(PageForm):
 
     def compile_view(self):
         url = "http://www.omdbapi.com/?s=" + self.search
+        url = url.replace(' ', '%20')
         request = urllib2.Request(url)
         opener = urllib2.build_opener()
         result = opener.open(request)
-
         json_doc = json.load(result)
 
         for item in json_doc['Search']:
             self._t = item['Title']
-            self._title = '<li><a href ="http://www.omdbapi.com/?t=' + self.t + '">Title: ' + item['Title'] + '</a></li>'
+            self._title = '<li><a href ="http://www.omdbapi.com/?t=' + self._t + '">Title: ' + item['Title'] + '</a></li>'
             self._year = '<li>Year: ' + item['Year'] + '</li>'
             self._type = '<li>Type: ' + item['Type'] + '</li>'
             self.__result_body += self._title + self._year + self._type + '<br />'
+
 
         return self.__result_start + self.__result_body + self.__result_end
