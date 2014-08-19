@@ -12,20 +12,24 @@ import json
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
+        #creating instances of PageForm and ResultList
         p = PageForm()
         rl = ResultList()
 
         #input format is 'type', 'name/value', 'placeholder'
         p.inputs = [['text', 'search', 'Search by Title'], ['submit', 'Search']]
 
+        #compile the initial page view
         self.response.write(p.compile_view())
 
+        #if GET is called (search submit)
         if self.request.GET:
-
-            rl.search = str(self.request.GET['search'])
-
+            #set the search var in ResultList to the value of the search input.
+            rl.search = self.request.GET['search']
+            #try compiling the view using the Result List method
             try:
                 self.response.write(rl.compile_view())
+            #if an error is thrown, the search was unsuccessful.
             except:
                 self.response.write("I'm sorry, I couldn't find what you are looking for. Please Try Again.")
 
@@ -110,6 +114,5 @@ class ResultList(PageForm):
             self._year = '<li>Year: ' + item['Year'] + '</li>'
             self._type = '<li>Type: ' + item['Type'] + '</li>'
             self.__result_body += self._title + self._year + self._type + '<br />'
-
 
         return self.__result_start + self.__result_body + self.__result_end
