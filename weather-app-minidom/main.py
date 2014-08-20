@@ -37,6 +37,7 @@ class MainHandler(webapp2.RequestHandler):
 
             self.response.write(self.content)
 
+
 class Page(object): #borrowing from the object class
     def __init__(self):
         self._head = '''

@@ -24,6 +24,7 @@ class MainHandler(webapp2.RequestHandler):
 
         #if GET is called (search submit)
         if self.request.GET:
+
             #set the search var in ResultList to the value of the search input.
             rl.search = self.request.GET['search']
             #try compiling the view using the Result List method
@@ -48,12 +49,13 @@ class Page(object):
 <html lang="en">
     <head>
       <meta charset="UTF-8">
-       <title></title>
+       <title>{title}</title>
     </head>
     <body>'''
 
         #var to hold the body content
-        self._body = ''
+        self._body = '''
+<h1>Movie Buff</h1>'''
 
         #var to hold the closing tags at the page foot.
         self._close = '''
@@ -106,8 +108,18 @@ class ResultList(PageForm):
         self.search = ''
         self._title = ''
         self._year = ''
-        self._type = ''
-        self._t = ''
+        self._rated = ''
+        self._released = ''
+        self._runtime = ''
+        self._genre = ''
+        self._director = ''
+        self._writer = ''
+        self._actors = ''
+        self._plot = ''
+        self._lang = ''
+        self._country = ''
+        self._awards = ''
+        self._poster = ''
         self.__result_start = '''
     <div id="results">
         <ul>'''
@@ -117,18 +129,44 @@ class ResultList(PageForm):
     </div>'''
 
     def compile_view(self):
-        url = "http://www.omdbapi.com/?s=" + self.search
+        url = "http://www.omdbapi.com/?plot=full&t=" + self.search
         url = url.replace(' ', '%20')
         request = urllib2.Request(url)
         opener = urllib2.build_opener()
         result = opener.open(request)
-        json_doc = json.load(result)
+        jdoc = json.load(result)
 
-        for item in json_doc['Search']:
-            self._t = item['Title']
-            self._title = '<li><a href ="http://www.omdbapi.com/?t=' + self._t + '">Title: ' + item['Title'] + '</a></li>'
-            self._year = '<li>Year: ' + item['Year'] + '</li>'
-            self._type = '<li>Type: ' + item['Type'] + '</li>'
-            self.__result_body += self._title + self._year + self._type + '<br />'
+        self._title = jdoc['Title']
+        self._year = jdoc['Year']
+        self._rated = jdoc['Rated']
+        self._released = jdoc['Released']
+        self._runtime = jdoc['Runtime']
+        self._genre = jdoc['Genre']
+        self._director = jdoc['Director']
+        self._writer = jdoc['Writer']
+        self._actors = jdoc['Actors']
+        self._plot = jdoc['Plot']
+        self._lang = jdoc['Language']
+        self._country = jdoc['Country']
+        self._awards = jdoc['Awards']
+        self._poster = jdoc['Poster']
+
+        self.__result_body = '''
+<li>Title: {self._title}</li>
+<li>Year: {self._year}</li>
+<li>Rated: {self._rated}</li>
+<li>Released: {self._released}</li>
+<li>Run Time: {self._runtime}</li>
+<li>Genre: {self._genre}</li>
+<li>Director: {self._director}</li>
+<li>Writer: {self._writer}</li>
+<li>Actors: {self._actors}</li>
+<li>Plot: {self._plot}</li>
+<li>Language: {self._lang}</li>
+<li>Country: {self._country}</li>
+<li>Awards: {self._awards}</li>
+<li><img src={self._poster} alt="" /></li>'''
+
+        self.__result_body = self.__result_body.format(**locals())
 
         return self.__result_start + self.__result_body + self.__result_end
