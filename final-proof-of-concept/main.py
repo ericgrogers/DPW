@@ -22,7 +22,7 @@ class MainHandler(webapp2.RequestHandler):
         #compile the initial page view
         self.response.write(p.compile_view())
 
-        #if GET is called (search submit)
+        #if GET is called (submit search)
         if self.request.GET:
 
             #set the search var in ResultList to the value of the search input.
@@ -49,13 +49,14 @@ class Page(object):
 <html lang="en">
     <head>
       <meta charset="UTF-8">
-       <title>{title}</title>
+       <title>Movie Buff</title>
     </head>
     <body>'''
 
         #var to hold the body content
         self._body = '''
-<h1>Movie Buff</h1>'''
+<h1>Movie Buff</h1>
+<h2>Search for any movie title to get buffed.</h2>'''
 
         #var to hold the closing tags at the page foot.
         self._close = '''
@@ -64,7 +65,9 @@ class Page(object):
 
     #method to compile the page view.
     def compile_view(self):
-        return self._head + self._body + self._close
+        html = self._head + self._body + self._close
+        html = html.format(**locals())
+        return html
 
 
 #class for the page form
@@ -125,7 +128,6 @@ class ResultList(PageForm):
         <ul>'''
         self.__result_body = ''
         self.__result_end = '''
-        </ul>
     </div>'''
 
     def compile_view(self):
@@ -152,20 +154,21 @@ class ResultList(PageForm):
         self._poster = jdoc['Poster']
 
         self.__result_body = '''
-<li>Title: {self._title}</li>
-<li>Year: {self._year}</li>
-<li>Rated: {self._rated}</li>
-<li>Released: {self._released}</li>
-<li>Run Time: {self._runtime}</li>
-<li>Genre: {self._genre}</li>
-<li>Director: {self._director}</li>
-<li>Writer: {self._writer}</li>
-<li>Actors: {self._actors}</li>
-<li>Plot: {self._plot}</li>
-<li>Language: {self._lang}</li>
-<li>Country: {self._country}</li>
-<li>Awards: {self._awards}</li>
-<li><img src={self._poster} alt="" /></li>'''
+    <li>Title: {self._title}</li>
+    <li>Year: {self._year}</li>
+    <li>Rated: {self._rated}</li>
+    <li>Released: {self._released}</li>
+    <li>Run Time: {self._runtime}</li>
+    <li>Genre: {self._genre}</li>
+    <li>Director: {self._director}</li>
+    <li>Writer: {self._writer}</li>
+    <li>Actors: {self._actors}</li>
+    <li>Plot: {self._plot}</li>
+    <li>Languages: {self._lang}</li>
+    <li>Country: {self._country}</li>
+    <li>Awards: {self._awards}</li>
+</ul>
+<p><img src={self._poster} alt="" /></p>'''
 
         self.__result_body = self.__result_body.format(**locals())
 
