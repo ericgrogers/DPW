@@ -1,0 +1,116 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*========= End of CSS Reset ===================*/
+
+
+body {
+	background-color: #000;
+	color: #fff;
+}
+
+h1 {
+	width: 100%;
+	height: 100px;
+	background: #A50B0B;
+	line-height: 2;
+	font-size: 3em;
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+form {
+	text-align: center;
+}
+
+input {
+	width: 20%;
+	height: 40px;
+	font-size: 1.5em;
+	border: 1px solid #c20404;
+	margin-bottom: 50px;
+	background-image: -webkit-gradient(
+	linear,
+	left top,
+	left bottom,
+	color-stop(0.43, #FFFFFF),
+	color-stop(1, #FFB5B5)
+);
+background-image: -o-linear-gradient(bottom, #FFFFFF 43%, #FFB5B5 100%);
+background-image: -moz-linear-gradient(bottom, #FFFFFF 43%, #FFB5B5 100%);
+background-image: -webkit-linear-gradient(bottom, #FFFFFF 43%, #FFB5B5 100%);
+background-image: -ms-linear-gradient(bottom, #FFFFFF 43%, #FFB5B5 100%);
+background-image: linear-gradient(to bottom, #FFFFFF 43%, #FFB5B5 100%);
+}
+
+input:nth-of-type(2) {
+	width: 120px;
+	border: none;
+	height: 44px;
+	color: #fff;
+	font-size: 2em;
+	background-image: -webkit-gradient(
+	linear,
+	left top,
+	left bottom,
+	color-stop(0, #FFFFFF),
+	color-stop(0.29, #C20404)
+);
+background-image: -o-linear-gradient(bottom, #FFFFFF 0%, #C20404 29%);
+background-image: -moz-linear-gradient(bottom, #FFFFFF 0%, #C20404 29%);
+background-image: -webkit-linear-gradient(bottom, #FFFFFF 0%, #C20404 29%);
+background-image: -ms-linear-gradient(bottom, #FFFFFF 0%, #C20404 29%);
+background-image: linear-gradient(to bottom, #FFFFFF 0%, #C20404 29%);
+	border-radius: 0 10px 10px 0;
+}
+
+ul {
+	width: 540px;
+	float: left;
+	margin-left: 50px;
+}
+
+p {
+	width: 350px;
+	float: right;
+}

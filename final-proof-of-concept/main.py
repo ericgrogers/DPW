@@ -50,13 +50,13 @@ class Page(object):
     <head>
       <meta charset="UTF-8">
        <title>Movie Buff</title>
+       <link type="text/css" rel="stylesheet" href="css/styles.css">
     </head>
     <body>'''
 
         #var to hold the body content
         self._body = '''
-<h1>Movie Buff</h1>
-<h2>Search for any movie title to get buffed.</h2>'''
+<h1>Movie Buff</h1>'''
 
         #var to hold the closing tags at the page foot.
         self._close = '''
@@ -66,7 +66,6 @@ class Page(object):
     #method to compile the page view.
     def compile_view(self):
         html = self._head + self._body + self._close
-        html = html.format(**locals())
         return html
 
 
