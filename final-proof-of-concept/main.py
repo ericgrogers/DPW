@@ -32,7 +32,8 @@ class MainHandler(webapp2.RequestHandler):
                 self.response.write(rl.compile_view())
             #if an error is thrown, the search was unsuccessful.
             except:
-                self.response.write("I'm sorry, I couldn't find what you are looking for. Please Try Again.")
+                p.body = "<h2>I'm sorry, I couldn't find what you are looking for. Please Try Again.</h2>"
+                self.response.write(p.body)
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
@@ -67,6 +68,14 @@ class Page(object):
     def compile_view(self):
         html = self._head + self._body + self._close
         return html
+
+    @property
+    def body(self):
+        return self._body
+
+    @body.setter
+    def body(self, new_value):
+        self._body = new_value
 
 
 #class for the page form
