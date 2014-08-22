@@ -1,3 +1,16 @@
+/*
+************************************
+Eric Rogers
+08/17/14
+Design Patterns for Web Programming
+Final: Proof of Concept
+API: http://www.omdbapi.com/
+***********************************
+*/
+
+
+/*======== CSS Reset ========================*/
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -43,6 +56,8 @@ table {
 }
 /*========= End of CSS Reset ===================*/
 
+
+/*---- Fonts ----------*/
 @font-face {
     font-family: 'ac_filmstripregular';
     src: url('../fonts/acfilmstrip-webfont.eot');
@@ -55,10 +70,13 @@ table {
 
 }
 
+/*=========== Site Styles =================*/
 body {
 	background-color: #000;
 	color: #fff;
 }
+
+/*--------- Header ----------------*/
 
 h1 {
 	font-family: "ac_filmstripregular";
@@ -70,6 +88,8 @@ h1 {
 	text-align: center;
 	margin-bottom: 50px;
 }
+
+/*---------- Search form ------------*/
 
 form {
 	text-align: center;
@@ -119,6 +139,8 @@ background-image: linear-gradient(to bottom, #FFFFFF 0%, #C20404 29%);
 	border-radius: 0 10px 10px 0;
 }
 
+/*--------- Returned Movie Data -----------*/
+
 ul {
 	width: 540px;
 	float: left;
@@ -141,6 +163,8 @@ p {
 img {
 	width: 350px;
 }
+
+/*----- Error Message ---------*/
 
 h2 {
 	font-size: 2em;
