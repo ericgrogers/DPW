@@ -30,7 +30,7 @@ class MainHandler(webapp2.RequestHandler):
             #try compiling the view using the Result List method
             try:
                 self.response.write(rl.compile_view())
-            #if an error is thrown, the search was unsuccessful.
+            #if an error is thrown, the search was unsuccessful. Display an error message.
             except:
                 p.body = "<h2>I'm sorry, I couldn't find what you are looking for. Please Try Again.</h2>"
                 self.response.write(p.body)
@@ -66,13 +66,17 @@ class Page(object):
 
     #method to compile the page view.
     def compile_view(self):
+        #concatenate the different html parts into a single variable, "html".
         html = self._head + self._body + self._close
+        #return the html
         return html
 
+    #define a getter for body attribute.
     @property
     def body(self):
         return self._body
-
+    
+    #define a setter for the body attribute.
     @body.setter
     def body(self, new_value):
         self._body = new_value
