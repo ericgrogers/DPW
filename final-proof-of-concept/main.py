@@ -161,6 +161,7 @@ class ResultList(PageForm):
         #parse the JSON returned from the API
         jdoc = json.load(result)
 
+        #using the parsed JSON, set the attributes values for the movie search.
         self._title = jdoc['Title']
         self._year = jdoc['Year']
         self._rated = jdoc['Rated']
@@ -176,6 +177,8 @@ class ResultList(PageForm):
         self._awards = jdoc['Awards']
         self._poster = jdoc['Poster']
 
+        #place the attribute values in the body attribute using an unordered list.
+        #TODO this needs to cleaned up, possibly a "for ___ in ___" in a separate class to produce the unordered list.
         self.__result_body = '''
     <li>Title: {self._title}</li>
     <li>Year: {self._year}</li>
@@ -191,8 +194,12 @@ class ResultList(PageForm):
     <li>Country: {self._country}</li>
     <li>Awards: {self._awards}</li>
 </ul>
+
+<!-- add the movie poster if one is found -->
 <p><img src={self._poster} alt="" /></p>'''
 
+        #format the body html allowing us to use the attributes in the markup.
         self.__result_body = self.__result_body.format(**locals())
 
+        #return the results.
         return self.__result_start + self.__result_body + self.__result_end
