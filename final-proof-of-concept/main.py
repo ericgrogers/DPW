@@ -75,7 +75,7 @@ class Page(object):
     @property
     def body(self):
         return self._body
-    
+
     #define a setter for the body attribute.
     @body.setter
     def body(self, new_value):
@@ -117,9 +117,12 @@ class PageForm(Page):
         return self._head + self._body + self._form_start + self._form_inputs + self._form_end + self._close
 
 
+#class to parse the results from the movie search
 class ResultList(PageForm):
     def __init__(self):
+        #ResultList inherits from the PageForm class
         super(ResultList, self).__init__()
+        #defining all of the attributes
         self.search = ''
         self._title = ''
         self._year = ''
@@ -142,7 +145,10 @@ class ResultList(PageForm):
         self.__result_end = '''
     </div>'''
 
+    #method to compile the results
+    #TODO create a data object for the results and make a new class for the compiler logic to keep the code cleaner and shorter.
     def compile_view(self):
+        
         url = "http://www.omdbapi.com/?plot=full&t=" + self.search
         url = url.replace(' ', '%20')
         request = urllib2.Request(url)
