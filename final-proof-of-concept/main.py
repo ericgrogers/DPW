@@ -148,12 +148,17 @@ class ResultList(PageForm):
     #method to compile the results
     #TODO create a data object for the results and make a new class for the compiler logic to keep the code cleaner and shorter.
     def compile_view(self):
-        
+        # set the url to retrieve the JSON data using the value from the search.
         url = "http://www.omdbapi.com/?plot=full&t=" + self.search
+        #replace all white space that is entered into the search with the url encoded space. (%20)
         url = url.replace(' ', '%20')
+        #create a request using the url
         request = urllib2.Request(url)
+        #create an object to get the url
         opener = urllib2.build_opener()
+        #use the url to request info from the API
         result = opener.open(request)
+        #parse the JSON returned from the API
         jdoc = json.load(result)
 
         self._title = jdoc['Title']
