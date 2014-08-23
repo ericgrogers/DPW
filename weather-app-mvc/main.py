@@ -8,7 +8,6 @@ class MainHandler(webapp2.RequestHandler):
     def get(self):
         p = FormPage()
         p.inputs = [['zip', 'text', 'Zip Code'], ['Submit', 'submit']]
-        self.response.write(p.print_out())
 
         if self.request.GET:
             wm = WeatherModel()  # Creates the Model
@@ -17,18 +16,8 @@ class MainHandler(webapp2.RequestHandler):
 
             wv = WeatherView()  # Creates the View
             wv.wdo = wm.dos  # takes objects from Model and gives them to View.
-
-            # self.response.write(xmldoc.getElementsByTagName('title')[0].firstChild.nodeValue)
-            # self.content = '<br/>'
-            # for item in list:
-            #     self.content += item.attributes['day'].value
-            #     self.content += "   HIGH: " + item.attributes['high'].value
-            #     self.content += "   LOW: " + item.attributes['low'].value
-            #     self.content += "   HIGH: " + item.attributes['text'].value
-            #     self.content += '<img src="images/' + item.attributes['code'].value + '.png" width="40" />'
-            #     self.content += "<br/>"
-            #
-            # self.response.write(self.content)
+            p._body = wv.content
+        self.response.write(p.print_out())
 
 
 class WeatherView(object):
@@ -40,6 +29,9 @@ class WeatherView(object):
     def update(self):
         for do in self.__wdo:
             self.__content += do.day
+            self.__content += '<br /> High: ' + do.high + '<br />Low: ' + do.low
+            self.__content += '<img src="images/' + do.code + '.png" width="50" />'
+            self.__content += '<br /><br />'
 
     @property
     def content(self):
@@ -52,6 +44,7 @@ class WeatherView(object):
     @wdo.setter
     def wdo(self, arr):
         self.__wdo = arr
+        self.update()
 
 class WeatherModel(object):
     """ This model handles fetching, parsing, and sorting data from Yahoo! weather API"""
@@ -121,6 +114,7 @@ class Page(object):  # borrowing from the object class
     <body>'''
 
         self._body = 'Weather App'
+        self._body_header = '<h1>Weather App using the Yahoo! Weather API</h1>'
         self._close = '''
     </body>
 </html>'''
@@ -155,7 +149,7 @@ class FormPage(Page):
                 self._form_inputs += '" >'
 
     def print_out(self):
-        return self._head + self._body + self._form_open + self._form_inputs + self._form_close + self._close
+        return self._head + self._body_header + self._form_open + self._form_inputs + self._body + self._form_close + self._close
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
