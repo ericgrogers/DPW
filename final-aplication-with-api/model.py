@@ -49,7 +49,7 @@ class MovieModel(object):
         # Place the data into an array.
         self._movie_data = [md.title, md.year, md.rated, md.released, md.runtime, md.genre, md.director, md.writer, md.actors, md.plot, md.lang, md.country, md.awards, md.poster, md.id]
         # When the API returns N/A for a data value, replace it with the text, 'Not enough data.'
-        self._movie_data = [value.replace('N/A', 'Not enough data.') for value in self._title_data]
+        self._movie_data = [value.replace('N/A', 'Not enough data.') for value in self._movie_data]
 
     def get_list(self):
         """Method for getting the list of movies from a search."""
@@ -86,7 +86,7 @@ class MovieModel(object):
 
     @property  # property decorator
     def movie_data(self):  # getter for title_data
-        return self._movie_data  # returns the private title_data
+        return self._movie_data  # returns the protected movie_data
 
     @property  # property decorator
     def search(self):  # getter for search
