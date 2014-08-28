@@ -1,0 +1,213 @@
+/*
+************************************
+Eric Rogers
+08/25/14
+Design Patterns for Web Programming
+Final Project: Application with API
+API: http://www.omdbapi.com/
+***********************************
+*/
+/*======== CSS Reset ========================*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline
+    }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block
+    }
+
+body {
+    line-height: 1
+    }
+
+ol, ul {
+    list-style: none
+    }
+
+blockquote, q {
+    quotes: none
+    }
+
+blockquote:before, blockquote:after, q:before, q:after {
+    content: "";
+    content: none
+    }
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+    }
+
+/*========= End of CSS Reset ===================*/
+/*---- Fonts ----------*/
+@font-face {
+    font-family: "ac_filmstripregular";
+    src: url(../fonts/acfilmstrip-webfont.eot);
+    src: url(../fonts/acfilmstrip-webfont.eot?#iefix) format("embedded-opentype"), url(../fonts/acfilmstrip-webfont.woff) format("woff"), url(../fonts/acfilmstrip-webfont.ttf) format("truetype"), url(../fonts/acfilmstrip-webfont.svg#ac_filmstripregular) format("svg");
+    font-weight: normal;
+    font-style: normal
+    }
+
+/*=========== Site Styles =================*/
+body {
+    min-height: 1000px;
+    background: url(../images/bkg2.png), url(../images/bkg.jpg);
+    background-repeat: no-repeat;
+    background-position: center bottom, center top;
+    color: #4d4d4d
+    }
+
+/*--------- Header ----------------*/
+h1 {
+    font-family: "ac_filmstripregular";
+    width: 100%;
+    height: 100px;
+    background: #A50B0B;
+    line-height: 1;
+    font-size: 5em;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #fff
+    }
+
+/*---------- Search form ------------*/
+form {
+    text-align: center
+    }
+
+input {
+    width: 50%;
+    height: 50px;
+    font-size: 1.5em;
+    border: 2px solid #A50B0B;
+    margin: 50px 0 50px 0;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -moz-border-radius: 10px 0 0 10px;
+    -webkit-border-radius: 10px 0 0 10px;
+    border-radius: 10px 0 0 10px;
+    text-indent: 10px;
+    -moz-box-shadow: 0 0 15px #fff;
+    -webkit-box-shadow: 0 0 15px #fff;
+    box-shadow: 0 0 15px #fff
+    }
+
+input:nth-of-type(2) {
+    width: 120px;
+    border: none;
+    height: 50px;
+    color: #fff;
+    font-size: 1.5em;
+    background: #A50B0B;
+    -moz-border-radius: 0 10px 10px 0;
+    -webkit-border-radius: 0 10px 10px 0;
+    border-radius: 0 10px 10px 0
+    }
+
+/*--------- Returned Movie Data -----------*/
+ul {
+    width: 320px;
+    height: 130px;
+    float: left;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-left: 8.33333333333%;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    background: url(../images/film.png) repeat;
+    padding: 10px;
+    -moz-box-shadow: 0 5px 5px rgba(17, 12, 73, 0.3);
+    -webkit-box-shadow: 0 5px 5px rgba(17, 12, 73, 0.3);
+    box-shadow: 0 5px 5px rgba(17, 12, 73, 0.3);
+    position: relative
+    }
+
+.movie-titles li:first-child {
+    font-family: "Candal", sans-serif;
+    padding-top: 12px;
+    font-size: 1.175em;
+    text-align: center
+    }
+
+.movie-titles li:last-child {
+    font-family: "Candal", sans-serif;
+    width: 100px;
+    text-align: center;
+    position: absolute;
+    bottom: -10px;
+    left: 98px;
+    -moz-box-shadow: 0 5px 5px rgba(17, 12, 73, 0.1);
+    -webkit-box-shadow: 0 5px 5px rgba(17, 12, 73, 0.1);
+    box-shadow: 0 5px 5px rgba(17, 12, 73, 0.1);
+    background: #fff;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0.42, rgb(255, 255, 255)), color-stop(1, rgb(161, 161, 161)));
+    background-image: -o-linear-gradient(bottom, rgb(255, 255, 255) 42%, rgb(161, 161, 161) 100%);
+    background-image: -moz-linear-gradient(bottom, rgb(255, 255, 255) 42%, rgb(161, 161, 161) 100%);
+    background-image: -webkit-linear-gradient(bottom, rgb(255, 255, 255) 42%, rgb(161, 161, 161) 100%);
+    background-image: -ms-linear-gradient(bottom, rgb(255, 255, 255) 42%, rgb(161, 161, 161) 100%);
+    background-image: linear-gradient(to bottom, rgb(255, 255, 255) 42%, rgb(161, 161, 161) 100%);
+    padding: 5px
+    }
+
+.movie-info {
+    width: 35%;
+    height: 100%;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.8)
+    }
+
+ul.movie-info li {
+    display: block;
+    line-height: 1.3;
+    padding: 10px
+    }
+
+li {
+    font-size: 1.2em;
+    padding-bottom: 20px;
+    line-height: 1.2
+    }
+
+p {
+    width: 400px;
+    float: right;
+    margin-right: 10%
+    }
+
+/*------- Movie Posters --------*/
+img {
+    width: 350px;
+    margin-top: 30px;
+    -moz-box-shadow: 0 0 50px #000;
+    -webkit-box-shadow: 0 0 50px #000;
+    box-shadow: 0 0 50px #000
+    }
+
+span {
+    font-family: "Candal", sans-serif;
+    color: #A50B0B
+    }
+
+a {
+    color: #f00
+    }
+
+/*----- Error Message ---------*/
+h2 {
+    font-size: 1.5em;
+    color: red;
+    text-align: center;
+    padding: 20px;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0.06, rgb(255, 255, 255)), color-stop(0.18, rgb(255, 255, 255)), color-stop(0.86, rgb(255, 255, 255)), color-stop(1, rgb(255, 255, 255)));
+    background-image: -o-linear-gradient(bottom, rgba(255, 255, 255, 0) 6%, rgb(255, 255, 255) 18%, rgb(255, 255, 255) 86%, rgba(255, 255, 255, 0) 100%);
+    background-image: -moz-linear-gradient(bottom, rgba(255, 255, 255, 0) 6%, rgb(255, 255, 255) 18%, rgb(255, 255, 255) 86%, rgba(255, 255, 255, 0) 100%);
+    background-image: -webkit-linear-gradient(bottom, rgba(255, 255, 255, 0) 6%, rgb(255, 255, 255) 18%, rgb(255, 255, 255) 86%, rgba(255, 255, 255, 0) 100%);
+    background-image: -ms-linear-gradient(bottom, rgba(255, 255, 255, 0) 6%, rgb(255, 255, 255) 18%, rgb(255, 255, 255) 86%, rgba(255, 255, 255, 0) 100%);
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 6%, rgb(255, 255, 255) 18%, rgb(255, 255, 255) 86%, rgba(255, 255, 255, 0) 100%)
+    }
