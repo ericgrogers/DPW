@@ -45,4 +45,9 @@ class MovieModel(object):
         md.country = self.__jdoc['Country']  # set the movie's country
         md.awards = self.__jdoc['Awards']  # set the movie's award(s)
         md.poster = self.__jdoc['Poster']  # set the movie's poster
-        md.id = self.__jdoc['imdbID'] # set the movie's id
+        md.id = self.__jdoc['imdbID']  # set the movie's id
+
+        # Place the data into an array.
+        self._title_data = [md.title, md.year, md.rated, md.released, md.runtime, md.genre, md.director, md.writer, md.actors, md.plot, md.lang, md.country, md.awards, md.poster, md.id]
+        # When the API returns N/A for a data value, replace it with the text, 'Not enough data.'
+        self._title_data = [value.replace('N/A', 'Not enough data.') for value in self._title_data]
