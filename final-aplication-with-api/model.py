@@ -19,3 +19,12 @@ class MovieModel(object):
         self.__search = ''  # used to store search values
         self.__id = ''  # holds the movie id
         self.__jdoc = ''  # holds the returned json
+
+    def get_title(self):
+        """Method for handling a movie's data."""
+
+        self.__url += "?plot=full&i="  # sets the url to a search by id, that returns a full length plot
+        request = urllib2.Request(self.__url + self.__id)  # construct the request
+        opener = urllib2.build_opener()  # create an object to get the url
+        result = opener.open(request)  # use the url to request info from the API
+        self.__jdoc = json.load(result)  # parse the JSON returned from the API
