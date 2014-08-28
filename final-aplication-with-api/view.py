@@ -44,3 +44,31 @@ class MovieView(object):
     <li><a href="?i=''' + do.id + '">' + do.title + '''</a></li>
     <li>''' + do.year + '''</li>
 </ul>'''  # create the html to display the movie list item and append the movie's id to the link created.
+
+    # Getters and Setters for the MovieView() class
+
+    @property  # property decorator
+    def mdo(self):  # getter for the mdo array
+        return self.__mdo  # return the private mdo array
+
+    @mdo.setter  # setter decorator
+    def mdo(self, o):  # setter for the mdo array
+        self.__mdo = o  # set the private mdo array to the new value
+        self.update_list()  # call the update list method
+
+    @property  # property decorator
+    def list_content(self):  # getter for the list_content
+        return self.__list_content  # return the private list_content
+
+    @property  # property decorator
+    def movie_content(self):  # getter for the movie_content
+        return self.__movie_content  # return the private movie_content
+
+    @property  # property decorator
+    def md(self):  # getter for the md (movie data)
+        return self.__md  # return the private md (movie data)
+
+    @md.setter  # setter decorator
+    def md(self, new_md):  # setter for the md (movie data)
+        self.__md = new_md  # set the private md to the new value
+        self.update_movie()  # call the update_movie method
