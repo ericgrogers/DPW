@@ -37,3 +37,12 @@ class MovieModel(object):
         md.released = self.__jdoc['Released']  # set the movie's release date
         md.runtime = self.__jdoc['Runtime']  # set the movie's runtime
         md.genre = self.__jdoc['Genre']  # set the movie's genre
+        md.director = self.__jdoc['Director']  # set the movie's director
+        md.writer = self.__jdoc['Writer']  # set the movie's writer
+        md.actors = self.__jdoc['Actors']  # set the movie's actor(s)
+        md.plot = self.__jdoc['Plot']  # set the movie's plot
+        md.lang = self.__jdoc['Language']  # set the movie's language(s)
+        md.country = self.__jdoc['Country']  # set the movie's country
+        md.awards = self.__jdoc['Awards']  # set the movie's award(s)
+        md.poster = self.__jdoc['Poster']  # set the movie's poster
+        md.id = self.__jdoc['imdbID'] # set the movie's id
