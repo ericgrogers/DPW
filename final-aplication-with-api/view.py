@@ -149,3 +149,9 @@ class PageFormView(PageView):
                 self._form_inputs += '<input type="' + item[0] + '" name="' + item[1] + '" placeholder="' + item[2] + '">'
             except:  # otherwise create an input that uses a value attribute
                 self._form_inputs += '<input type="' + item[0] + '" value="' + item[1] + '">'
+
+    ################--- USES POLYMORPHISM ----#######################
+    def compile_view(self):
+        """METHOD THAT USES POLYMORPHISM TO OVERRIDE THE compile_view METHOD IN THE PageView CLASS."""
+        html = self._head + self._body + self._form_start + self._form_inputs + self._form_end + self._content + self._close  # concatenate the html parts.
+        return html  # return the concatenated html
