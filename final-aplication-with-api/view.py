@@ -9,8 +9,8 @@ API: http://www.omdbapi.com/
 
 class MovieView(object):
     """This class handles how the data is displayed."""
-    def __init__(self):
-        self.__movie_content = ''
-        self.__md = ''
-        self.__mdo = []
-        self.__list_content = ''
+    def __init__(self):  # initialize the MovieView
+        self.__movie_content = ''  # movie content
+        self.__md = ''  # movie data
+        self.__mdo = []  # movie data objects array
+        self.__list_content = ''  # movie list content
