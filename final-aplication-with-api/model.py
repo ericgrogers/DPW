@@ -28,3 +28,12 @@ class MovieModel(object):
         opener = urllib2.build_opener()  # create an object to get the url
         result = opener.open(request)  # use the url to request info from the API
         self.__jdoc = json.load(result)  # parse the JSON returned from the API
+
+        # Sorting the Movie Data
+        md = MovieData()  # create an instance of the MovieData object
+        md.title = self.__jdoc['Title']  # set the movie's title
+        md.year = self.__jdoc['Year']  # set the movie's year
+        md.rated = self.__jdoc['Rated']  # set the movie's rating
+        md.released = self.__jdoc['Released']  # set the movie's release date
+        md.runtime = self.__jdoc['Runtime']  # set the movie's runtime
+        md.genre = self.__jdoc['Genre']  # set the movie's genre
