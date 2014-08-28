@@ -123,4 +123,3 @@ class MovieListData(object):
         self.title = ''  # set the movie title
         self.year = ''  # set the movie year
         self.id = ''  # set the movie id
-
