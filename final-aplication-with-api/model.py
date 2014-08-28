@@ -70,6 +70,32 @@ class MovieModel(object):
             do.id = item['imdbID']  # set the movie id
             self._dos.append(do)  # append the data object to the array of data objects
 
+    # Getters and Setters for the MovieModel() class
+
+    @property  # property decorator
+    def id(self):  # getter for the movie id
+        return self.__id  # returns the private id attribute
+
+    @id.setter  # setter decorator
+    def id(self, new_id):  # setter for the movie id
+        self.__id = new_id  # sets the new id value
+
+    @property  # property decorator
+    def dos(self):  # getter for the dos (data objects) array
+        return self._dos  # returns the private dos array
+
+    @property  # property decorator
+    def title_data(self):  # getter for title_data
+        return self._title_data  # returns the private title_data
+
+    @property  # property decorator
+    def search(self):  # getter for search
+        pass  # this getter is not used (write only)
+
+    @search.setter  # setter decorator
+    def search(self, s):  # setter for search
+        self.__search = s  # sets the new search value
+
 
 class MovieData(object):
     """This data object holds the Movie data fetched by the model and displayed by the view."""
