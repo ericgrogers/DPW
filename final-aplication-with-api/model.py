@@ -14,7 +14,7 @@ import json
 class MovieModel(object):
     """This model handles fetching, parsing, and sorting the data from the API."""
 
-    def __init__(self):
+    def __init__(self):  # initialize the movie model
         self.__url = "http://www.omdbapi.com/"  # setting the base url for the API
         self.__search = ''  # used to store search values
         self.__id = ''  # holds the movie id
@@ -51,3 +51,23 @@ class MovieModel(object):
         self._title_data = [md.title, md.year, md.rated, md.released, md.runtime, md.genre, md.director, md.writer, md.actors, md.plot, md.lang, md.country, md.awards, md.poster, md.id]
         # When the API returns N/A for a data value, replace it with the text, 'Not enough data.'
         self._title_data = [value.replace('N/A', 'Not enough data.') for value in self._title_data]
+
+
+class MovieData(object):
+    """This data object holds the Movie data fetched by the model and displayed by the view."""
+    def __init__(self):  # initialize the movie data object
+        self.title = ''  # movie title
+        self.year = ''  # movie year
+        self.rated = ''  # movie rating
+        self.released = ''  # movie release date
+        self.runtime = ''  # movie runtime
+        self.genre = ''  # movie genre
+        self.director = ''  # movie director
+        self.writer = ''  # movie writer
+        self.actors = ''  # movie actor(s)
+        self.plot = ''  # movie plot
+        self.lang = ''  # movie language(s)
+        self.country = ''  # movie country
+        self.awards = ''  # movie award(s)
+        self.poster = ''  # movie poster
+        self.imdb_ID = ''  # movie id
