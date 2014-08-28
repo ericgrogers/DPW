@@ -35,3 +35,12 @@ class MovieView(object):
         self.__movie_content += '<li><span>Awards: </span>' + self.__md[12] + '</li>'  # add the award(s) from 'md' (movie data)
         self.__movie_content += '</ul>'  # close the unordered list
         self.__movie_content += '<p><img src="' + self.__md[13] + '" alt="" /></p></div>'  # add the poster from 'md' (movie data)
+
+    def update_list(self):
+        """Method to update the movie list"""
+        for do in self.__mdo:  # loop through the do (data object) in the mdo (movie data objects) array
+            self.__list_content += '''
+<ul class="movie-titles">
+    <li><a href="?i=''' + do.id + '">' + do.title + '''</a></li>
+    <li>''' + do.year + '''</li>
+</ul>'''  # create the html to display the movie list item and append the movie's id to the link created.
