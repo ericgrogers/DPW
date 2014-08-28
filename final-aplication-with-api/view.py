@@ -103,3 +103,13 @@ class PageView(object):
         """Method for compiling the page view"""
         html = self._head + self._body + self._close  # concatenate the different html parts into a single variable, "html".
         return html  # return the html
+
+    # Getter and Setter for the PageView() class
+
+    @property  # property decorator
+    def body(self):  # getter for body
+        return self._body  # returns the private body
+
+    @body.setter  # setter decorator
+    def body(self, new_value):  # setter for the body
+        self._body = new_value  # set the private body to the new value
