@@ -22,7 +22,6 @@ class MovieModel(object):
 
     def get_title(self):
         """Method for handling a movie's data."""
-
         self.__url += "?plot=full&i="  # sets the url to a search by id, that returns a full length plot
         request = urllib2.Request(self.__url + self.__id)  # construct the request
         opener = urllib2.build_opener()  # create an object to get the url
@@ -51,6 +50,15 @@ class MovieModel(object):
         self._title_data = [md.title, md.year, md.rated, md.released, md.runtime, md.genre, md.director, md.writer, md.actors, md.plot, md.lang, md.country, md.awards, md.poster, md.id]
         # When the API returns N/A for a data value, replace it with the text, 'Not enough data.'
         self._title_data = [value.replace('N/A', 'Not enough data.') for value in self._title_data]
+
+    def get_list(self):
+        """Method for getting the list of movies from a search."""
+        self.__url += "?s="  # set the url to use the search function of the API
+        self.__search = self.__search.replace(' ', '%20')  # replace spaces in the user search terms with the proper url encoding
+        request = urllib2.Request(self.__url + self.__search)  # construct the request
+        opener = urllib2.build_opener()  # create an object to get the url
+        result = opener.open(request)  # use the url to request info from the API
+        self.__jdoc = json.load(result)  # parse the JSON returned from the API
 
 
 class MovieData(object):
