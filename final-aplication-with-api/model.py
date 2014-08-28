@@ -20,7 +20,7 @@ class MovieModel(object):
         self.__id = ''  # holds the movie id
         self.__jdoc = ''  # holds the returned json
 
-    def get_title(self):
+    def get_movie(self):
         """Method for handling a movie's data."""
         self.__url += "?plot=full&i="  # sets the url to a search by id, that returns a full length plot
         request = urllib2.Request(self.__url + self.__id)  # construct the request
@@ -47,9 +47,9 @@ class MovieModel(object):
         md.id = self.__jdoc['imdbID']  # set the movie's id
 
         # Place the data into an array.
-        self._title_data = [md.title, md.year, md.rated, md.released, md.runtime, md.genre, md.director, md.writer, md.actors, md.plot, md.lang, md.country, md.awards, md.poster, md.id]
+        self._movie_data = [md.title, md.year, md.rated, md.released, md.runtime, md.genre, md.director, md.writer, md.actors, md.plot, md.lang, md.country, md.awards, md.poster, md.id]
         # When the API returns N/A for a data value, replace it with the text, 'Not enough data.'
-        self._title_data = [value.replace('N/A', 'Not enough data.') for value in self._title_data]
+        self._movie_data = [value.replace('N/A', 'Not enough data.') for value in self._title_data]
 
     def get_list(self):
         """Method for getting the list of movies from a search."""
@@ -85,8 +85,8 @@ class MovieModel(object):
         return self._dos  # returns the private dos array
 
     @property  # property decorator
-    def title_data(self):  # getter for title_data
-        return self._title_data  # returns the private title_data
+    def movie_data(self):  # getter for title_data
+        return self._movie_data  # returns the private title_data
 
     @property  # property decorator
     def search(self):  # getter for search
