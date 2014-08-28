@@ -60,6 +60,16 @@ class MovieModel(object):
         result = opener.open(request)  # use the url to request info from the API
         self.__jdoc = json.load(result)  # parse the JSON returned from the API
 
+        movie_list = self.__jdoc['Search']  # set movie_list to the 'Search' JSON object
+        self._dos = []  # empty array for the data objects
+
+        for item in movie_list:  # loop through every item in movie_list
+            do = MovieListData()  # create an instance of the MovieDataList data object
+            do.title = item['Title']  # set the movie title
+            do.year = item['Year']  # set the movie year
+            do.id = item['imdbID']  # set the movie id
+            self._dos.append(do)  # append the data object to the array of data objects
+
 
 class MovieData(object):
     """This data object holds the Movie data fetched by the model and displayed by the view."""
