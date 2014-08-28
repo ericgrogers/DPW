@@ -72,3 +72,29 @@ class MovieView(object):
     def md(self, new_md):  # setter for the md (movie data)
         self.__md = new_md  # set the private md to the new value
         self.update_movie()  # call the update_movie method
+
+
+#######--- ABSTRACT CLASS ---#########
+class PageView(object):
+    """ABSTRACT PAGE CLASS TO BE USED AS A TEMPLATE FOR THE PAGES."""
+    def __init__(self):  # initialize the PageView
+        #setting boilerplate html for the head of the page
+        self._head = '''
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta charset="UTF-8">
+       <title>Movie Buff</title>
+       <link href='http://fonts.googleapis.com/css?family=Candal' rel='stylesheet' type='text/css'>
+       <link type="text/css" rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>'''
+        #var to hold static body content
+        self._body = '''
+<h1>Movie Ndex</h1>'''
+        # var to hold the page content
+        self._content = ''
+        #var to hold the closing tags at the page foot.
+        self._close = '''
+    </body>
+</html>'''
