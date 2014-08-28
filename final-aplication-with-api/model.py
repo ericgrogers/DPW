@@ -71,3 +71,12 @@ class MovieData(object):
         self.awards = ''  # movie award(s)
         self.poster = ''  # movie poster
         self.imdb_ID = ''  # movie id
+
+
+class MovieListData(object):
+    """This object hold the data fetched from a user search"""
+    def __init__(self):  # initialize the movie list data object
+        self.title = ''  # set the movie title
+        self.year = ''  # set the movie year
+        self.id = ''  # set the movie id
+
