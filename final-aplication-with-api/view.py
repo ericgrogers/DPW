@@ -113,3 +113,16 @@ class PageView(object):
     @body.setter  # setter decorator
     def body(self, new_value):  # setter for the body
         self._body = new_value  # set the private body to the new value
+
+
+########----- INHERITS FROM THE PageView() CLASS. ---##############
+class PageFormView(PageView):
+    """CLASS TO HANDLE THE PAGE VIEW. INHERITS FROM PageView."""
+    def __init__(self):  # initialize the PageFormView
+        super(PageFormView, self).__init__()  # inherits from the PageView() class
+        self._form_start = '<form method="GET">'  # set the form start
+        self._form_end = '</form>'  # set the form end
+        self.__inputs = []  # array to hold the inputs
+        self._form_inputs = ''  # form inputs
+        self._error_message1 = "<h2>I'm sorry, I cannot search for blanks. Please try searching for a movie.</h2>"  # error message that displays if the user submits a blank search
+        self._error_message2 = "<h2>I'm sorry, I couldn't find what you are looking for. Please Try Again.</h2>"  # error message that displays if the user's search cannot be found by the API
