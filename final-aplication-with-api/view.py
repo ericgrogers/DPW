@@ -98,3 +98,8 @@ class PageView(object):
         self._close = '''
     </body>
 </html>'''
+
+    def compile_view(self):
+        """Method for compiling the page view"""
+        html = self._head + self._body + self._close  # concatenate the different html parts into a single variable, "html".
+        return html  # return the html
