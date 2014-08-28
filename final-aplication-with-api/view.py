@@ -126,3 +126,26 @@ class PageFormView(PageView):
         self._form_inputs = ''  # form inputs
         self._error_message1 = "<h2>I'm sorry, I cannot search for blanks. Please try searching for a movie.</h2>"  # error message that displays if the user submits a blank search
         self._error_message2 = "<h2>I'm sorry, I couldn't find what you are looking for. Please Try Again.</h2>"  # error message that displays if the user's search cannot be found by the API
+
+    # Getters and Setters for the PageFormView() class
+
+    @property  # property decorator
+    def error1(self):  # getter for error1 (blank submission)
+        return self._error_message1  # return the error message
+
+    @property  # property decorator
+    def error2(self):  # getter for error2 (nothing found)
+        return self._error_message2  # return the error message
+
+    @property  # property decorator
+    def inputs(self):  # getter for the inputs
+        return self._form_inputs  # return the private form inputs
+
+    @inputs.setter  # setter decorator
+    def inputs(self, arr):  # setter for the inputs
+        self.__inputs = arr  # set the private inputs to the new array values
+        for item in arr:  # loop through the array
+            try:  # try to create an input that uses a placeholder attribute
+                self._form_inputs += '<input type="' + item[0] + '" name="' + item[1] + '" placeholder="' + item[2] + '">'
+            except:  # otherwise create an input that uses a value attribute
+                self._form_inputs += '<input type="' + item[0] + '" value="' + item[1] + '">'
